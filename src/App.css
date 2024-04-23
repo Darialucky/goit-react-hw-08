@@ -1,7 +1,21 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
+  background-image: url("./components/img/tel1.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: +1;
+  opacity: 1;
 }
 
 .logo {
@@ -40,12 +54,7 @@
   color: #888;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 h1 {
   margin-bottom: 20px;
+  color: wheat;
 }

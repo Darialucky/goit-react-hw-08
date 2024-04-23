@@ -1,8 +1,16 @@
 import styles from "./Contact.module.css";
 import { IoPerson } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { deleteContact } from "../../redux/contactsSlice";
+import { useDispatch } from "react-redux";
 
-export default function Contact({ data: { id, name, number }, onDelete }) {
+export default function Contact({ data: { id, name, number } }) {
+  const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(deleteContact(id));
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.text}>
@@ -14,7 +22,7 @@ export default function Contact({ data: { id, name, number }, onDelete }) {
           {number}
         </p>
       </div>
-      <button className={styles.btn} onClick={() => onDelete(id)}>
+      <button className={styles.btn} onClick={handleDelete}>
         Delete
       </button>
     </div>

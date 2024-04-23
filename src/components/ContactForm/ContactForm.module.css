@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid black;
+  border: 3px solid wheat;
   padding: 10px;
   border-radius: 5px;
   min-width: 300px;
   margin-bottom: 20px;
   border-radius: 10px;
+  color: azure;
 }
 
 .formField {
@@ -32,13 +33,14 @@
 
 .formField input:focus {
   outline: none;
-  border-color: blue;
+  border-color: #3e2723;
 }
 
 .formBtn {
-  background-color: #0000ff;
+  background-color: #3e2723;
+  color: wheat;
 }
 
 .formBtn:hover:focus {
-  background-color: #0000cc;
+  background-color: #230b11;
 }
