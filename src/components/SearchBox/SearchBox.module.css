@@ -20,5 +20,5 @@
 
 .input:focus {
   outline: none;
-  border-color: yellow;
+  border-color: rgb(67, 42, 42);
 }
