@@ -17,7 +17,16 @@ export const addContact = createAsyncThunk(
   "contacts/addContact",
   async ({ name, number }, thunkAPI) => {
     try {
-      const response = await axios.post("/contacts", { name, number });
+      const token = getTokenFromState(thunkAPI.getState()); // Отримання токену зі стану (припущення)
+      const response = await axios.post(
+        "/contacts",
+        { name, number },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
