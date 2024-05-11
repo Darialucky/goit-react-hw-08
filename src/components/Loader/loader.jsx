@@ -1,7 +1,12 @@
 import { Grid } from "react-loader-spinner";
 
 const Loader = () => {
-  return (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+    }}
+  >
     <Grid
       visible={true}
       height={80}
@@ -12,7 +17,7 @@ const Loader = () => {
       wrapperStyle={{}}
       className="grid-wrapper"
     />
-  );
+  </div>;
 };
 
 export default Loader;

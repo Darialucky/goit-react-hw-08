@@ -28,21 +28,23 @@ const RegisterForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={css.container}>
-      <label>
-        Username
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" required />
-      </label>
-      <button type="submit" className={css.btn}>
-        Register
-      </button>
+      <div className={css.label}>
+        <label className={css.text}>
+          Username
+          <input type="text" name="name" required />
+        </label>
+        <label className={css.text}>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label className={css.text}>
+          Password
+          <input type="password" name="password" required />
+        </label>
+        <button type="submit" className={css.btn}>
+          Register
+        </button>
+      </div>
     </form>
   );
 };

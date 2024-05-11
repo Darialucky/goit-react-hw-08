@@ -1,30 +1,33 @@
-import styles from "./Contact.module.css";
+import css from "./Contact.module.css";
 import { IoPerson } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { deleteContact } from "../../redux/contacts/operations";
 import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
 
-export default function Contact({ data: { id, name, number } }) {
+const Contact = ({ contact }) => {
   const dispatch = useDispatch();
-
   const handleDelete = () => {
-    dispatch(deleteContact(id));
+    dispatch(deleteContact(contact.id));
+    toast.success("Successfully delete");
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.text}>
-        <p className={styles.name}>
-          <BsFillTelephoneFill /> {name}
+    <div className={css.container}>
+      <div className={css.text}>
+        <p className={css.name}>
+          <BsFillTelephoneFill /> {contact.name}
         </p>
-        <p className={styles.number}>
+        <p className={css.number}>
           <IoPerson />
-          {number}
+          {contact.number}
         </p>
       </div>
-      <button className={styles.btn} onClick={handleDelete}>
+      <button className={css.btn} onClick={handleDelete}>
         Delete
       </button>
     </div>
   );
-}
+};
+
+export default Contact;

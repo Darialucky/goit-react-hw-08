@@ -1,7 +1,7 @@
 import { Toaster } from "react-hot-toast";
 import DocumentTitle from "../../DocumentTitle";
 import RegisterForm from "../../components/RegistrationForm/RegistrationForm";
-import css from "./RegisterPage.module.css";
+import css from "./RegistrationPage.module.css";
 
 const RegisterPage = () => {
   return (

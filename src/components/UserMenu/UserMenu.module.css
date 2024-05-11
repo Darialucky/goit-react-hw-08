@@ -10,6 +10,7 @@
   font-size: 14px;
   border: 3px solid bisque;
   padding: 6px;
+  margin-right: 20px;
 }
 
 .btn:hover {
@@ -17,4 +18,11 @@
   color: rgb(229, 226, 226);
   outline: none;
   border-color: transparent;
+}
+
+.text {
+  color: bisque;
+  text-decoration: none;
+  padding-right: 3px;
+  font-weight: 500;
 }

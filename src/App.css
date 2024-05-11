@@ -5,10 +5,11 @@
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: center;
   align-items: flex-start;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .container {
@@ -56,4 +57,9 @@
 h1 {
   margin-bottom: 20px;
   color: wheat;
+}
+
+p {
+  color: beige;
+  text-align: center;
 }
