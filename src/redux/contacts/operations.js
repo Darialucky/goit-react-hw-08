@@ -6,6 +6,7 @@ export const fetchContacts = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get("/contacts");
+      console.log(res.data);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -17,16 +18,7 @@ export const addContact = createAsyncThunk(
   "contacts/addContact",
   async ({ name, number }, thunkAPI) => {
     try {
-      const token = getTokenFromState(thunkAPI.getState()); // Отримання токену зі стану (припущення)
-      const response = await axios.post(
-        "/contacts",
-        { name, number },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.post("/contacts", { name, number });
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
