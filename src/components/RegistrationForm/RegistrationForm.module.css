@@ -1,6 +1,6 @@
 .btn {
   font-size: 14px;
-  border: 1px solid burlywood;
+  border: 1px solid bisque;
   padding: 6px;
 }
 
@@ -13,7 +13,7 @@
 
 .container {
   display: flex;
-  gap: 28px;
+  gap: 16px;
   align-items: center;
   justify-content: center;
 }

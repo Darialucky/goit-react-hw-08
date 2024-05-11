@@ -1,0 +1,13 @@
+.container {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.text {
+  color: bisque;
+  text-decoration: none;
+  padding-right: 3px;
+}

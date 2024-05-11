@@ -1,6 +1,14 @@
+.container {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
 .btn {
   font-size: 14px;
-  border: 1px solid burlywood;
+  border: 3px solid bisque;
   padding: 6px;
 }
 
@@ -9,11 +17,4 @@
   color: rgb(229, 226, 226);
   outline: none;
   border-color: transparent;
-}
-
-.container {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  justify-content: center;
 }
